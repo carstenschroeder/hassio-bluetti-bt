@@ -11,6 +11,7 @@ class EP600(ProtocolV2Device):
         super().__init__(address, "EP600", sn)
 
         # Details
+        self.struct.add_bool_field("system_switch", 2011)
         self.struct.add_uint_field("battery_range_start", 2022)
         self.struct.add_uint_field("battery_range_end", 2023)
         self.struct.add_uint_field("max_ac_input_power", 2213)

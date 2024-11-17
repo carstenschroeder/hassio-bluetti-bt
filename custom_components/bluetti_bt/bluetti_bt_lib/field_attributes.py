@@ -284,9 +284,14 @@ FIELD_ATTRIBUTES: dict[str, FieldAttributes] = {
         setter=False,  # Disabled for safety reasons
         name="Time Control",
     ),
+    "system_switch": FieldAttributes(
+        type=FieldType.BOOL,
+        setter=False,  # Disabled for safety reasons
+        name="System Switch",
+    ),
     "battery_range_start": FieldAttributes(
         type=FieldType.NUMERIC,
-        setter=False,  # Disabled
+        setter=True,  
         name="Battery Range Start",
         unit_of_measurement="%",
     ),
